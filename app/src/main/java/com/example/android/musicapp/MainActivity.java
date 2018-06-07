@@ -13,7 +13,7 @@ import butterknife.OnClick;
 public class MainActivity extends AppCompatActivity {
     public int buttonClicked;
 
-
+    public boolean playDisplayed= false;
 
     @OnClick(R.id.mainPlay)
     public void test(){
@@ -55,6 +55,12 @@ public class MainActivity extends AppCompatActivity {
 
     public void setViewHighlight(){
         playImage.setVisibility(View.VISIBLE);
+        playDisplayed=true;
+        btn1.setBackgroundColor(0x00000000);
+        btn2.setBackgroundColor(0x00000000);
+        btn3.setBackgroundColor(0x00000000);
+        btn4.setBackgroundColor(0x00000000);
+        btn5.setBackgroundColor(0x00000000);
         switch (buttonClicked){
             case 1:
                 btn1.setBackgroundColor(getResources().getColor(R.color.colorAccent));
