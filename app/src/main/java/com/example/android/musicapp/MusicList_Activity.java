@@ -3,6 +3,8 @@ package com.example.android.musicapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 
 import java.util.ArrayList;
@@ -52,7 +54,13 @@ public class MusicList_Activity extends AppCompatActivity {
         SongAdapter itemsAdapter = new SongAdapter(this, songList);
         ListView listView = (ListView) findViewById(R.id.list);
         listView.setAdapter(itemsAdapter);
-
+         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+             @Override
+             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                 Intent intent = new Intent(MusicList_Activity.this, MusicPlayer_Activity.class);
+                 startActivity(intent);
+             }
+         });
 
     }
 }
