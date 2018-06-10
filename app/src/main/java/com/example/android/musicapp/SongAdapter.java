@@ -10,6 +10,7 @@ import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class SongAdapter extends ArrayAdapter<Song>{
 
@@ -26,10 +27,13 @@ public class SongAdapter extends ArrayAdapter<Song>{
         Song currentSong = getItem(position);
 
         // Find the TextView in the list_item.xml layout with the minwok word
-        TextView songInfo = (TextView) listItemView.findViewById(R.id.snameAndArtistTV);
+        TextView songName = (TextView) listItemView.findViewById(R.id.sNameTV);
         // Get the version name from the current AndroidFlavor object and
         // set this text on the name TextView
-        songInfo.setText(currentSong.displaySongInfo());
+        songName.setText(currentSong.getName());
+
+        TextView artistName = (TextView) listItemView.findViewById(R.id.aNameTV);
+        artistName.setText(currentSong.getDisplayArtist());
 
         // Find the TextView in the list_item.xml layout with the ID version_number
         TextView scoreTextView = (TextView) listItemView.findViewById(R.id.scoreTV);

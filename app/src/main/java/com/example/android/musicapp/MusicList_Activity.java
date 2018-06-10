@@ -25,7 +25,7 @@ public class MusicList_Activity extends AppCompatActivity {
                 songList.add(new Song("reggae", "Let you go", 3.5, "SOJA", "", "Strength To Survive"));
                 songList.add(new Song("reggae", "Let you go", 3.5, "SOJA", "", "Strength To Survive"));
                 songList.add(new Song("reggae", "Let you go", 3.5, "SOJA", "", "Strength To Survive"));
-                songList.add(new Song("reggae", "Let you go", 3.5, "SOJA", "", "Strength To Survive"));
+                songList.add(new Song("reggae", "She Still Loves", 3.5, "SOJA", "Collie Buddz", "Amid The Noise And Haste"));
                 songList.add(new Song("reggae", "Let you go", 3.5, "SOJA", "", "Strength To Survive"));
                 songList.add(new Song("reggae", "Let you go", 3.5, "SOJA", "", "Strength To Survive"));
                 songList.add(new Song("reggae", "Let you go", 3.5, "SOJA", "", "Strength To Survive"));

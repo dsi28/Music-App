@@ -80,6 +80,7 @@ public class Song {
             displayArtist= mainArtist;
         }else {
             displayArtist = mainArtist + ", " + featArtist;
+            //cut off
         }
     }
 

@@ -56,26 +56,27 @@ public class MainActivity extends AppCompatActivity {
     public void setViewHighlight(){
         playImage.setVisibility(View.VISIBLE);
         playDisplayed=true;
-        btn1.setBackgroundColor(0x00000000);
-        btn2.setBackgroundColor(0x00000000);
-        btn3.setBackgroundColor(0x00000000);
-        btn4.setBackgroundColor(0x00000000);
-        btn5.setBackgroundColor(0x00000000);
+        playImage.setVisibility(View.VISIBLE);
+        btn1.setBackgroundTintList(getResources().getColorStateList(R.color.colorAccent));
+        btn2.setBackgroundTintList(getResources().getColorStateList(R.color.colorAccent));
+        btn3.setBackgroundTintList(getResources().getColorStateList(R.color.colorAccent));
+        btn4.setBackgroundTintList(getResources().getColorStateList(R.color.colorAccent));
+        btn5.setBackgroundTintList(getResources().getColorStateList(R.color.colorAccent));
         switch (buttonClicked){
             case 1:
-                btn1.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                btn1.setBackgroundTintList(getResources().getColorStateList(R.color.selected));
                 break;
             case 2:
-                btn2.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                btn2.setBackgroundTintList(getResources().getColorStateList(R.color.selected));
                 break;
             case 3:
-                btn3.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                btn3.setBackgroundTintList(getResources().getColorStateList(R.color.selected));
                 break;
             case 4:
-                btn4.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                btn4.setBackgroundTintList(getResources().getColorStateList(R.color.selected));
                 break;
             case 5:
-                btn5.setBackgroundColor(getResources().getColor(R.color.colorAccent));
+                btn5.setBackgroundTintList(getResources().getColorStateList(R.color.selected));
                 break;
             default:
                 break;
