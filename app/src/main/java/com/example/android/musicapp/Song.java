@@ -1,8 +1,10 @@
 package com.example.android.musicapp;
 
 import android.graphics.drawable.Drawable;
+import android.os.Parcel;
+import android.os.Parcelable;
 
-public class Song {
+public class Song implements Parcelable {
     //private static int id;
     private String genre;
     private String name;
@@ -11,7 +13,7 @@ public class Song {
     private String featArtist;
     private String displayArtist;
     private String album;
-    private int Score=10;
+    private int score=10;
 //    public Drawable pic;
 
 
@@ -24,6 +26,15 @@ public class Song {
         setFeatArtist(featArtist);
         setAlbum(album);
         setDisplayArtist();
+    }
+
+
+    public void noLikeSong(){
+        score--;
+    }
+
+    public void likeSong(){
+        score++;
     }
 
     public String displaySongInfo(){
@@ -66,7 +77,7 @@ public class Song {
     }
 
     public String getScore() {
-        return Score+"";
+        return score+"";
     }
 
 //    public Drawable getPic() {
@@ -109,7 +120,48 @@ public class Song {
     }
 
     public void setScore(int score) {
-        Score = score;
+        score = score;
+    }
+
+
+    protected Song(Parcel in) { // the order of this has to be same as write to parcel method
+        genre = in.readString();
+        name = in.readString();
+        length = in.readDouble();
+        mainArtist = in.readString();
+        featArtist = in.readString();
+        displayArtist = in.readString();
+        album = in.readString();
+        score = in.readInt();
+    }
+
+    public static final Creator<Song> CREATOR = new Creator<Song>() {
+        @Override
+        public Song createFromParcel(Parcel in) {
+            return new Song(in);
+        }
+
+        @Override
+        public Song[] newArray(int size) {
+            return new Song[size];
+        }
+    };
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel dest, int flags) { // the order of this has to be the same as the protected Song contructor
+        dest.writeString(genre);
+        dest.writeString(name);
+        dest.writeDouble(length);
+        dest.writeString(mainArtist);
+        dest.writeString(featArtist);
+        dest.writeString(displayArtist);
+        dest.writeString(album);
+        dest.writeInt(score);
     }
 
 //    public void setPic(Drawable pic) {

@@ -71,7 +71,6 @@
         android:gravity="center"
         android:textColor="@color/colorAccent"
 
-        android:text="I Don't Wanna Wait"
         android:textSize="27sp"
         android:textStyle="bold"
 
@@ -95,7 +94,6 @@
         android:layout_marginStart="8dp"
         android:textColor="@color/colorAccent"
 
-        android:text="SOJA"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/playerPic"
@@ -189,7 +187,6 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:textColor="@color/colorAccent"
-        android:text="Reggae"
         app:layout_constraintBottom_toTopOf="@+id/playerPic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

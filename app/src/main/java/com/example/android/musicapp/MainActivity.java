@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -18,14 +19,31 @@ public class MainActivity extends AppCompatActivity {
     @OnClick(R.id.mainPlay)
     public void test(){
         if(playImage.getVisibility() == View.VISIBLE){
-            Intent goMusicList = new Intent(MainActivity.this, MusicList_Activity.class);
-            goMusicList.putExtra("listNum",buttonClicked);
-            startActivity(goMusicList);
+            Intent goMusicList;
+            switch (buttonClicked){
+                case 1:
+                    goMusicList = new Intent(MainActivity.this, ReggaeList_Activity.class);
+                    startActivity(goMusicList); // move to after the swtich when switch is filled.
+                    break;
+                case 2:
+                    Toast.makeText(this, "Only Reggae is implemented", Toast.LENGTH_LONG).show();
+                    break;
+                case 3:
+                    Toast.makeText(this, "Only Reggae is implemented", Toast.LENGTH_LONG).show();
+                    break;
+                case 4:
+                    Toast.makeText(this, "Only Reggae is implemented", Toast.LENGTH_LONG).show();
+                    break;
+                case 5:
+                    Toast.makeText(this, "Only Reggae is implemented", Toast.LENGTH_LONG).show();
+                    break;
+                default: break;
+            }
+
+
         }
 
     }
-
-
 
     @OnClick(R.id.mainBtn1)
     public void setButtonClicked1(){

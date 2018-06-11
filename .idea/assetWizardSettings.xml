@@ -3,6 +3,11 @@
   <component name="WizardSettings">
     <option name="children">
       <map>
+        <entry key="imageWizard">
+          <value>
+            <PersistentState />
+          </value>
+        </entry>
         <entry key="vectorWizard">
           <value>
             <PersistentState>
@@ -28,10 +33,12 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="7b1fa2" />
-                            <entry key="outputName" value="ic_play_circle_outline_black_24dp" />
+                            <entry key="color" value="e1bee7" />
+                            <entry key="height" value="60" />
+                            <entry key="outputName" value="ic_play_circle_outline_black_60dp" />
                             <entry key="overrideSize" value="true" />
                             <entry key="sourceFile" value="C:\Users\ds_az" />
+                            <entry key="width" value="60" />
                           </map>
                         </option>
                       </PersistentState>
