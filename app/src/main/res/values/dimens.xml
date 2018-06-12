@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="zeroDP">0dp</dimen>
+    <dimen name="extraSmallDP">2dp</dimen>
+    <dimen name="extraSmallDP1">4dp</dimen>
+    <dimen name="smallDP">8dp</dimen>
+    <dimen name="mainLargeDp">55dp</dimen>
+    <dimen name="medium1DP">17dp</dimen>
+    <dimen name="medium2DP">24dp</dimen>
+    <dimen name="medium3DP">32dp</dimen>
+    <dimen name="listDP">16dp</dimen>
+    <dimen name="large1DP">64dp</dimen>
+    <dimen name="medium4DP">48dp</dimen>
+
+
+    <dimen name="medSP">24sp</dimen>
+    <dimen name="medSP1">25sp</dimen>
+    <dimen name="medSP2">30sp</dimen>
+    <dimen name="medium1SP">17sp</dimen>
+    <dimen name="medium2SP">27sp</dimen>
+    <dimen name="medium3SP">33sp</dimen>
+    <dimen name="largSP">90sp</dimen>
+</resources>

@@ -16,9 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ReggaeList_Activity" />
-        <activity android:name=".MusicPlayer_Activity" />
-        <activity android:name=".SongDetails_Activity"></activity>
+        <activity android:name=".MusicListActivity" />
+        <activity android:name=".MusicPlayerActivity" />
+        <activity android:name=".SongDetailsActivity"></activity>
     </application>
 
 </manifest>

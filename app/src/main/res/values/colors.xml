@@ -7,4 +7,5 @@
     <color name="like">#388E3C</color>
     <color name="black">#000</color>
     <color name="selected">#E1BEE7</color>
+    <color name="white">#fff</color>
 </resources>

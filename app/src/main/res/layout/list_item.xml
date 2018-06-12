@@ -3,60 +3,56 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal">
-
-
+    android:orientation="horizontal"
+    xmlns:tools="http://schemas.android.com/tools">
     <TextView
         android:id="@+id/sNameTV"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_toLeftOf="@id/scoreTV"
+        android:layout_toStartOf="@id/scoreTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
-        android:textSize="25sp"
+        android:textSize="@dimen/medSP1"
         android:textColor="@color/colorAccent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginLeft="@dimen/listDP"
+        android:layout_marginStart="@dimen/listDP"
+        android:layout_marginTop="@dimen/smallDP"
         android:textStyle="bold"
         android:fontFamily="sans-serif-smallcaps"
-        android:text="Let you go"/>
+        tools:text="Let you go"/>
     <TextView
         android:id="@+id/aNameTV"
         android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
         android:layout_toLeftOf="@id/scoreTV"
+        android:layout_toStartOf="@id/scoreTV"
         android:layout_below="@id/sNameTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:textSize="17sp"
+        android:textSize="@dimen/medium1SP"
         android:textStyle="bold"
         android:textColor="@color/colorAccent"
-        android:layout_marginLeft="16dp"
-        android:layout_marginStart="16dp"
+        android:layout_marginLeft="@dimen/listDP"
+        android:layout_marginStart="@dimen/listDP"
         android:fontFamily="serif-monospace"
-        android:text="soja"
-        />
-
-
-
-
+        tools:text="soja"/>
     <TextView
         android:id="@+id/scoreTV"
         android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_centerInParent="true"
-        android:layout_marginRight="16dp"
+        android:layout_marginRight="@dimen/listDP"
+        android:layout_marginEnd="@dimen/listDP"
         android:textStyle="bold"
-        android:textSize="33sp"
-        android:text="10"
+        android:textSize="@dimen/medium3SP"
+        tools:text="10"
         android:fontFamily="sans-serif-smallcaps"
-        android:padding="4dp"
-        android:textColor="@color/colorAccent"
-        />
-
-
-
+        android:padding="@dimen/extraSmallDP1"
+        android:textColor="@color/colorAccent"/>
 </RelativeLayout>

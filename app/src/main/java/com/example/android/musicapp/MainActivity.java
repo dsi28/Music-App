@@ -13,64 +13,7 @@ import butterknife.OnClick;
 
 public class MainActivity extends AppCompatActivity {
     public int buttonClicked;
-
     public boolean playDisplayed= false;
-
-    @OnClick(R.id.mainPlay)
-    public void test(){
-        if(playImage.getVisibility() == View.VISIBLE){
-            Intent goMusicList;
-            switch (buttonClicked){
-                case 1:
-                    goMusicList = new Intent(MainActivity.this, ReggaeList_Activity.class);
-                    startActivity(goMusicList); // move to after the swtich when switch is filled.
-                    break;
-                case 2:
-                    Toast.makeText(this, "Only Reggae is implemented", Toast.LENGTH_LONG).show();
-                    break;
-                case 3:
-                    Toast.makeText(this, "Only Reggae is implemented", Toast.LENGTH_LONG).show();
-                    break;
-                case 4:
-                    Toast.makeText(this, "Only Reggae is implemented", Toast.LENGTH_LONG).show();
-                    break;
-                case 5:
-                    Toast.makeText(this, "Only Reggae is implemented", Toast.LENGTH_LONG).show();
-                    break;
-                default: break;
-            }
-
-
-        }
-
-    }
-
-    @OnClick(R.id.mainBtn1)
-    public void setButtonClicked1(){
-        buttonClicked=1;
-        setViewHighlight();
-    }
-    @OnClick(R.id.mainBtn2)
-    public void setButtonClicked2(){
-        buttonClicked=2;
-        setViewHighlight();
-    }
-    @OnClick(R.id.mainBtn3)
-    public void setButtonClicked3(){
-        buttonClicked=3;
-        setViewHighlight();
-    }
-    @OnClick(R.id.mainBtn4)
-    public void setButtonClicked4(){
-        buttonClicked=4;
-        setViewHighlight();
-    }
-    @OnClick(R.id.mainBtn5)
-    public void setButtonClicked5(){
-        buttonClicked=5;
-        setViewHighlight();
-    }
-
     public void setViewHighlight(){
         playImage.setVisibility(View.VISIBLE);
         playDisplayed=true;
@@ -100,8 +43,39 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
-
-
+    @OnClick(R.id.mainBtn1)
+    public void setButtonClicked1(){
+        buttonClicked=1;
+        setViewHighlight();
+    }
+    @OnClick(R.id.mainBtn2)
+    public void setButtonClicked2(){
+        buttonClicked=2;
+        setViewHighlight();
+    }
+    @OnClick(R.id.mainBtn3)
+    public void setButtonClicked3(){
+        buttonClicked=3;
+        setViewHighlight();
+    }
+    @OnClick(R.id.mainBtn4)
+    public void setButtonClicked4(){
+        buttonClicked=4;
+        setViewHighlight();
+    }
+    @OnClick(R.id.mainBtn5)
+    public void setButtonClicked5(){
+        buttonClicked=5;
+        setViewHighlight();
+    }
+    @OnClick(R.id.mainPlay)
+    public void test(){
+        if(playImage.getVisibility() == View.VISIBLE){
+            Intent goMusicList = new Intent(MainActivity.this, MusicListActivity.class);
+            goMusicList.putExtra("selection", buttonClicked);
+            startActivity(goMusicList);
+        }
+    }
     @BindView(R.id.mainBtn1) Button btn1;
     @BindView(R.id.mainBtn2) Button btn2;
     @BindView(R.id.mainBtn3) Button btn3;
@@ -113,6 +87,5 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         butterknife.ButterKnife.bind(this);
-
     }
 }

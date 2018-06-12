@@ -1,12 +1,10 @@
 package com.example.android.musicapp;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.SeekBar;
 import android.widget.TextView;
@@ -15,7 +13,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class MusicPlayer_Activity extends AppCompatActivity {
+public class MusicPlayerActivity extends AppCompatActivity {
     private int like=0;
     private Song curSong;
     @Override
@@ -23,14 +21,11 @@ public class MusicPlayer_Activity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music_player_);
         ButterKnife.bind(this);
-
         Intent getIntent= getIntent();
         curSong = getIntent.getParcelableExtra("curSong");
-
         songName.setText(curSong.getName());
         artistName.setText(curSong.getMainArtist());
         songGenre.setText(curSong.getGenre());
-
     }
     @BindView(R.id.playerMusicListType) TextView songGenre;
     @BindView(R.id.playerPic)  ImageView songPic;
@@ -94,10 +89,9 @@ public class MusicPlayer_Activity extends AppCompatActivity {
             }
         }.start();
     }
-
     @OnClick(R.id.playerSongInfo)
     public void goToDetails(){
-        Intent intent = new Intent(MusicPlayer_Activity.this, SongDetails_Activity.class);
+        Intent intent = new Intent(MusicPlayerActivity.this, SongDetailsActivity.class);
         intent.putExtra("curSong", curSong);
         startActivity(intent);
     }

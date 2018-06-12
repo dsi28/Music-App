@@ -9,7 +9,7 @@ import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
 
-public class SongDetails_Activity extends AppCompatActivity {
+public class SongDetailsActivity extends AppCompatActivity {
     private Song curSong;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,6 @@ public class SongDetails_Activity extends AppCompatActivity {
         score.setText(curSong.getScore());
         album.setText(curSong.getAlbum());
     }
-
     @BindView(R.id.detailsName) TextView sName;
     @BindView(R.id.detailsArtist)TextView aName;
     @BindView(R.id.detailsGenre) TextView gName;
@@ -33,6 +32,5 @@ public class SongDetails_Activity extends AppCompatActivity {
     @OnClick(R.id.detailsBtn)
     public void goToPlayer(){
         finish();
-
     }
 }

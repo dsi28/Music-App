@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">Music App</string>
+    <string name="hipHop">Hip Hop</string>
+    <string name="dance">Dance</string>
+    <string name="reggae">Reggae</string>
+    <string name="myMusic">My Music</string>
+    <string name="rock">Rock</string>
+    <string name="mainPlayImgContentDesc">Play</string>
+    <string name="playerSongImgContentDesc">Song Picture</string>
+    <string name="playerBackDesc">prev song</string>
+    <string name="playerForDesc">next song</string>
+    <string name="playerInfoDesc">song details</string>
+    <string name="playerLikeDesc">like</string>
+    <string name="playerNoLikeDesc">dislike</string>
+    <string name="playerSongPlay">is playing</string>
+    <string name="playerSongPause">is paused</string>
+    <string name="playerSongPauseControl">is paused</string>
+    <string name="playerSongPlayControl">is playing</string>
+    <string name="return1">return</string>
 </resources>
