@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MusicPlayerActivity"
     android:background="@color/black">
+
     <ImageView
-        android:contentDescription="@string/playerSongImgContentDesc"
-        android:id="@+id/playerPic"
+        android:id="@+id/playerPicIv"
         android:layout_width="@dimen/zeroDP"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/smallDP"
@@ -19,6 +17,7 @@
         android:layout_marginTop="@dimen/smallDP"
         android:adjustViewBounds="true"
         android:background="@color/colorAccent"
+        android:contentDescription="@string/playerSongImgContentDesc"
         android:cropToPadding="true"
         android:padding="@dimen/smallDP"
         android:scaleType="fitCenter"
@@ -30,30 +29,30 @@
         app:srcCompat="@drawable/vinyl" />
     <ImageView
         android:contentDescription="@string/playerBackDesc"
-        android:id="@+id/playerBack"
+        android:id="@+id/playerBackIv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/smallDP"
         android:layout_marginLeft="@dimen/medium2DP"
         android:layout_marginStart="@dimen/medium2DP"
         android:layout_marginTop="@dimen/smallDP"
-        app:layout_constraintBottom_toBottomOf="@+id/playerSongBar"
-        app:layout_constraintStart_toStartOf="@+id/playerPic"
-        app:layout_constraintTop_toBottomOf="@+id/playerPic"
+        app:layout_constraintBottom_toBottomOf="@+id/playerSongSB"
+        app:layout_constraintStart_toStartOf="@+id/playerPicIv"
+        app:layout_constraintTop_toBottomOf="@+id/playerPicIv"
         app:layout_constraintVertical_bias="0.65999997"
         app:srcCompat="@android:drawable/ic_media_previous"/>
     <ImageView
         android:contentDescription="@string/playerForDesc"
-        android:id="@+id/playerForward"
+        android:id="@+id/playerForwardIv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/smallDP"
         android:layout_marginEnd="@dimen/medium2DP"
         android:layout_marginRight="@dimen/medium2DP"
         android:layout_marginTop="@dimen/smallDP"
-        app:layout_constraintBottom_toBottomOf="@+id/playerSongBar"
-        app:layout_constraintEnd_toEndOf="@+id/playerPic"
-        app:layout_constraintTop_toBottomOf="@+id/playerPic"
+        app:layout_constraintBottom_toBottomOf="@+id/playerSongSB"
+        app:layout_constraintEnd_toEndOf="@+id/playerPicIv"
+        app:layout_constraintTop_toBottomOf="@+id/playerPicIv"
         app:layout_constraintVertical_bias="0.65999997"
         app:srcCompat="@android:drawable/ic_media_next"/>
     <TextView
@@ -71,15 +70,15 @@
         android:textSize="@dimen/medium2SP"
         android:textStyle="bold"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/playerPic"
+        app:layout_constraintBottom_toTopOf="@+id/playerPicIv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.266"
-        tools:text="I Don't Wanna Wait" />
+        app:layout_constraintVertical_bias="0.266"/>
+
     <TextView
-        android:id="@+id/playerArtist"
+        android:id="@+id/playerArtistTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/smallDP"
@@ -90,14 +89,14 @@
         android:textColor="@color/colorAccent"
         android:textSize="@dimen/medSP"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/playerPic"
+        app:layout_constraintBottom_toTopOf="@+id/playerPicIv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/playerSongNameTV"
-        app:layout_constraintVertical_bias="0.100000024"
-        tools:text="SOJA"/>
+        app:layout_constraintVertical_bias="0.100000024"/>
+
     <SeekBar
-        android:id="@+id/playerSongBar"
+        android:id="@+id/playerSongSB"
         style="@style/Widget.AppCompat.SeekBar.Discrete"
         android:layout_width="@dimen/zeroDP"
         android:layout_height="wrap_content"
@@ -113,11 +112,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playerPic"
+        app:layout_constraintTop_toBottomOf="@+id/playerPicIv"
         app:layout_constraintVertical_bias="0.816" />
+
     <ImageView
-        android:contentDescription="@string/playerInfoDesc"
-        android:id="@+id/playerSongInfo"
+        android:id="@+id/playerSongInfoIv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/extraSmallDP"
@@ -125,6 +124,7 @@
         android:layout_marginLeft="@dimen/smallDP"
         android:layout_marginRight="@dimen/medium2DP"
         android:layout_marginStart="@dimen/smallDP"
+        android:contentDescription="@string/playerInfoDesc"
         android:visibility="visible"
         app:layout_constraintBottom_toBottomOf="@+id/playerSongNameTV"
         app:layout_constraintEnd_toEndOf="parent"
@@ -133,9 +133,9 @@
         app:layout_constraintTop_toTopOf="@+id/playerSongNameTV"
         app:layout_constraintVertical_bias="1.0"
         app:srcCompat="@android:drawable/ic_menu_info_details" />
+
     <ImageView
-        android:contentDescription="@string/playerLikeDesc"
-        android:id="@+id/playerLike"
+        android:id="@+id/playerLikeIv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/smallDP"
@@ -145,15 +145,16 @@
         android:layout_marginStart="@dimen/medium2DP"
         android:layout_marginTop="@dimen/listDP"
         android:adjustViewBounds="false"
+        android:contentDescription="@string/playerLikeDesc"
         android:cropToPadding="false"
-        app:layout_constraintBottom_toTopOf="@+id/playerForward"
-        app:layout_constraintEnd_toStartOf="@+id/playerForward"
-        app:layout_constraintStart_toEndOf="@+id/playerPauseSong"
-        app:layout_constraintTop_toBottomOf="@+id/playerPic"
+        app:layout_constraintBottom_toTopOf="@+id/playerForwardIv"
+        app:layout_constraintEnd_toStartOf="@+id/playerForwardIv"
+        app:layout_constraintStart_toEndOf="@+id/playerPauseSongIv"
+        app:layout_constraintTop_toBottomOf="@+id/playerPicIv"
         app:srcCompat="@android:drawable/ic_input_add" />
+
     <ImageView
-        android:contentDescription="@string/playerNoLikeDesc"
-        android:id="@+id/playerNoLike"
+        android:id="@+id/playerNoLikeIv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/smallDP"
@@ -162,13 +163,15 @@
         android:layout_marginRight="@dimen/medium2DP"
         android:layout_marginStart="@dimen/smallDP"
         android:layout_marginTop="@dimen/listDP"
-        app:layout_constraintBottom_toTopOf="@+id/playerBack"
-        app:layout_constraintEnd_toStartOf="@+id/playerPauseSong"
-        app:layout_constraintStart_toEndOf="@+id/playerBack"
-        app:layout_constraintTop_toBottomOf="@+id/playerPic"
+        android:contentDescription="@string/playerNoLikeDesc"
+        app:layout_constraintBottom_toTopOf="@+id/playerBackIv"
+        app:layout_constraintEnd_toStartOf="@+id/playerPauseSongIv"
+        app:layout_constraintStart_toEndOf="@+id/playerBackIv"
+        app:layout_constraintTop_toBottomOf="@+id/playerPicIv"
         app:srcCompat="@android:drawable/ic_delete" />
+
     <TextView
-        android:id="@+id/playerMusicListType"
+        android:id="@+id/playerMusicListTypeTV"
         android:layout_width="wrap_content"
         android:layout_height="@dimen/zeroDP"
         android:layout_marginBottom="@dimen/listDP"
@@ -178,32 +181,32 @@
         android:layout_marginStart="@dimen/smallDP"
         android:layout_marginTop="@dimen/smallDP"
         android:textColor="@color/colorAccent"
-        app:layout_constraintBottom_toTopOf="@+id/playerPic"
+        app:layout_constraintBottom_toTopOf="@+id/playerPicIv"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/playerArtist"
-        app:layout_constraintVertical_bias="0.882"
-        tools:text="Reggae"/>
+        app:layout_constraintTop_toBottomOf="@+id/playerArtistTV"
+        app:layout_constraintVertical_bias="0.882"/>
+
     <ImageView
+        android:id="@+id/playerPlayPicIv"
+        android:layout_width="@dimen/zeroDP"
+        android:layout_height="@dimen/zeroDP"
+        android:layout_marginBottom="@dimen/smallDP"
+        android:layout_marginEnd="@dimen/smallDP"
+        android:layout_marginLeft="@dimen/smallDP"
+        android:layout_marginRight="@dimen/smallDP"
+        android:layout_marginStart="@dimen/smallDP"
+        android:layout_marginTop="@dimen/smallDP"
         android:contentDescription="@string/playerSongPlay"
-        android:id="@+id/playerPlayPic"
-        android:layout_width="@dimen/zeroDP"
-        android:layout_height="@dimen/zeroDP"
-        android:layout_marginBottom="@dimen/smallDP"
-        android:layout_marginEnd="@dimen/smallDP"
-        android:layout_marginLeft="@dimen/smallDP"
-        android:layout_marginRight="@dimen/smallDP"
-        android:layout_marginStart="@dimen/smallDP"
-        android:layout_marginTop="@dimen/smallDP"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/playerPic"
-        app:layout_constraintEnd_toEndOf="@+id/playerPic"
-        app:layout_constraintStart_toStartOf="@+id/playerPic"
-        app:layout_constraintTop_toTopOf="@+id/playerPic"
+        app:layout_constraintBottom_toBottomOf="@+id/playerPicIv"
+        app:layout_constraintEnd_toEndOf="@+id/playerPicIv"
+        app:layout_constraintStart_toStartOf="@+id/playerPicIv"
+        app:layout_constraintTop_toTopOf="@+id/playerPicIv"
         app:srcCompat="@android:drawable/ic_media_play" />
+
     <ImageView
-        android:contentDescription="@string/playerSongPause"
-        android:id="@+id/playerPausePic"
+        android:id="@+id/playerPausePicIv"
         android:layout_width="@dimen/zeroDP"
         android:layout_height="@dimen/zeroDP"
         android:layout_marginBottom="@dimen/smallDP"
@@ -212,16 +215,17 @@
         android:layout_marginRight="@dimen/smallDP"
         android:layout_marginStart="@dimen/smallDP"
         android:layout_marginTop="@dimen/smallDP"
+        android:contentDescription="@string/playerSongPause"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/playerPic"
+        app:layout_constraintBottom_toBottomOf="@+id/playerPicIv"
         app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toEndOf="@+id/playerPic"
-        app:layout_constraintStart_toStartOf="@+id/playerPic"
-        app:layout_constraintTop_toTopOf="@+id/playerPic"
+        app:layout_constraintEnd_toEndOf="@+id/playerPicIv"
+        app:layout_constraintStart_toStartOf="@+id/playerPicIv"
+        app:layout_constraintTop_toTopOf="@+id/playerPicIv"
         app:srcCompat="@android:drawable/ic_media_pause" />
+
     <ImageView
-        android:contentDescription="@string/playerSongPlayControl"
-        android:id="@+id/playerPlaySong"
+        android:id="@+id/playerPlaySongIv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/smallDP"
@@ -230,16 +234,17 @@
         android:layout_marginRight="@dimen/smallDP"
         android:layout_marginStart="@dimen/smallDP"
         android:layout_marginTop="@dimen/smallDP"
+        android:contentDescription="@string/playerSongPlayControl"
         android:visibility="invisible"
-        app:layout_constraintBottom_toBottomOf="@+id/playerSongBar"
-        app:layout_constraintEnd_toStartOf="@+id/playerForward"
-        app:layout_constraintStart_toEndOf="@+id/playerBack"
-        app:layout_constraintTop_toBottomOf="@+id/playerPic"
+        app:layout_constraintBottom_toBottomOf="@+id/playerSongSB"
+        app:layout_constraintEnd_toStartOf="@+id/playerForwardIv"
+        app:layout_constraintStart_toEndOf="@+id/playerBackIv"
+        app:layout_constraintTop_toBottomOf="@+id/playerPicIv"
         app:layout_constraintVertical_bias="0.66999996"
         app:srcCompat="@android:drawable/ic_media_play" />
+
     <ImageView
-        android:contentDescription="@string/playerSongPauseControl"
-        android:id="@+id/playerPauseSong"
+        android:id="@+id/playerPauseSongIv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/smallDP"
@@ -248,11 +253,12 @@
         android:layout_marginRight="@dimen/smallDP"
         android:layout_marginStart="@dimen/smallDP"
         android:layout_marginTop="@dimen/smallDP"
+        android:contentDescription="@string/playerSongPauseControl"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="@+id/playerSongBar"
-        app:layout_constraintEnd_toStartOf="@+id/playerForward"
-        app:layout_constraintStart_toEndOf="@+id/playerBack"
-        app:layout_constraintTop_toBottomOf="@+id/playerPic"
+        app:layout_constraintBottom_toBottomOf="@+id/playerSongSB"
+        app:layout_constraintEnd_toStartOf="@+id/playerForwardIv"
+        app:layout_constraintStart_toEndOf="@+id/playerBackIv"
+        app:layout_constraintTop_toBottomOf="@+id/playerPicIv"
         app:layout_constraintVertical_bias="0.65999997"
         app:srcCompat="@android:drawable/ic_media_pause" />
 </android.support.constraint.ConstraintLayout>

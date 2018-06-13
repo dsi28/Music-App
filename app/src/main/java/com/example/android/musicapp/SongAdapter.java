@@ -1,6 +1,7 @@
 package com.example.android.musicapp;
 
 import android.app.Activity;
+import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
@@ -13,22 +14,34 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class SongAdapter extends ArrayAdapter<Song>{
+    public class ViewHolder{
+        private TextView songNameVH;
+        private TextView artistNameVH;
+        private TextView scoreVH;
+        ViewHolder(View v){
+            songNameVH=(TextView) v.findViewById(R.id.sNameTV);
+            artistNameVH=(TextView) v.findViewById(R.id.aNameTV);
+            scoreVH=(TextView) v.findViewById(R.id.scoreTV);
+        }
+    }
 
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
-        View listItemView = convertView;
-        if(listItemView == null) {
-            listItemView = LayoutInflater.from(getContext()).inflate(
-                    R.layout.list_item, parent, false);
+        View row = convertView;
+        ViewHolder holder = null;
+        if(row==null){
+            LayoutInflater inflater = (LayoutInflater) getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+            row= inflater.inflate(R.layout.list_item, parent, false);
+            holder= new ViewHolder(row);
+            row.setTag(holder);
+        }else{
+            holder = (ViewHolder) row.getTag();
         }
         Song currentSong = getItem(position);
-        TextView songName = (TextView) listItemView.findViewById(R.id.sNameTV);
-        songName.setText(currentSong.getName());
-        TextView artistName = (TextView) listItemView.findViewById(R.id.aNameTV);
-        artistName.setText(currentSong.getDisplayArtist());
-        TextView scoreTextView = (TextView) listItemView.findViewById(R.id.scoreTV);
-        scoreTextView.setText(currentSong.getScore());
-        return listItemView;
+        holder.songNameVH.setText(currentSong.getName());
+        holder.artistNameVH.setText(currentSong.getDisplayArtist());
+        holder.scoreVH.setText(currentSong.getScore());
+        return row;
     }
     public SongAdapter(Activity context, ArrayList<Song> songList){
         super(context, 0, songList);

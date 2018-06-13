@@ -20,8 +20,7 @@
         android:layout_marginStart="@dimen/listDP"
         android:layout_marginTop="@dimen/smallDP"
         android:textStyle="bold"
-        android:fontFamily="sans-serif-smallcaps"
-        tools:text="Let you go"/>
+        android:fontFamily="sans-serif-smallcaps"/>
     <TextView
         android:id="@+id/aNameTV"
         android:layout_alignParentLeft="true"
@@ -37,8 +36,7 @@
         android:textColor="@color/colorAccent"
         android:layout_marginLeft="@dimen/listDP"
         android:layout_marginStart="@dimen/listDP"
-        android:fontFamily="serif-monospace"
-        tools:text="soja"/>
+        android:fontFamily="serif-monospace"/>
     <TextView
         android:id="@+id/scoreTV"
         android:layout_alignParentRight="true"
@@ -51,7 +49,6 @@
         android:layout_marginEnd="@dimen/listDP"
         android:textStyle="bold"
         android:textSize="@dimen/medium3SP"
-        tools:text="10"
         android:fontFamily="sans-serif-smallcaps"
         android:padding="@dimen/extraSmallDP1"
         android:textColor="@color/colorAccent"/>

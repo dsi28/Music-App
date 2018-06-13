@@ -43,32 +43,32 @@ public class MainActivity extends AppCompatActivity {
                 break;
         }
     }
-    @OnClick(R.id.mainBtn1)
+    @OnClick(R.id.reggaeBtn)
     public void setButtonClicked1(){
         buttonClicked=1;
         setViewHighlight();
     }
-    @OnClick(R.id.mainBtn2)
+    @OnClick(R.id.hipHopBtn)
     public void setButtonClicked2(){
         buttonClicked=2;
         setViewHighlight();
     }
-    @OnClick(R.id.mainBtn3)
+    @OnClick(R.id.danceBtn)
     public void setButtonClicked3(){
         buttonClicked=3;
         setViewHighlight();
     }
-    @OnClick(R.id.mainBtn4)
+    @OnClick(R.id.rockBtn)
     public void setButtonClicked4(){
         buttonClicked=4;
         setViewHighlight();
     }
-    @OnClick(R.id.mainBtn5)
+    @OnClick(R.id.myMusicBtn)
     public void setButtonClicked5(){
         buttonClicked=5;
         setViewHighlight();
     }
-    @OnClick(R.id.mainPlay)
+    @OnClick(R.id.mainPlayIv)
     public void test(){
         if(playImage.getVisibility() == View.VISIBLE){
             Intent goMusicList = new Intent(MainActivity.this, MusicListActivity.class);
@@ -76,12 +76,12 @@ public class MainActivity extends AppCompatActivity {
             startActivity(goMusicList);
         }
     }
-    @BindView(R.id.mainBtn1) Button btn1;
-    @BindView(R.id.mainBtn2) Button btn2;
-    @BindView(R.id.mainBtn3) Button btn3;
-    @BindView(R.id.mainBtn4) Button btn4;
-    @BindView(R.id.mainBtn5) Button btn5;
-    @BindView(R.id.mainPlay) ImageView playImage;
+    @BindView(R.id.reggaeBtn) Button btn1;
+    @BindView(R.id.hipHopBtn) Button btn2;
+    @BindView(R.id.danceBtn) Button btn3;
+    @BindView(R.id.rockBtn) Button btn4;
+    @BindView(R.id.myMusicBtn) Button btn5;
+    @BindView(R.id.mainPlayIv) ImageView playImage;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

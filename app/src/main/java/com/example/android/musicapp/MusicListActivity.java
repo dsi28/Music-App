@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.ArrayList;
 
@@ -16,6 +17,8 @@ public class MusicListActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_music_list_);
+        getSupportActionBar().setTitle(getResources().getString(R.string.Library));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         Intent getIntent = getIntent();
         int selection = (int) getIntent.getSerializableExtra("selection");
         ArrayList<Song> songList = new ArrayList<>();
@@ -68,5 +71,8 @@ public class MusicListActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
+
+
 }

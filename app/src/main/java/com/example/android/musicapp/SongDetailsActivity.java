@@ -23,12 +23,14 @@ public class SongDetailsActivity extends AppCompatActivity {
         gName.setText(curSong.getGenre());
         score.setText(curSong.getScore());
         album.setText(curSong.getAlbum());
+        getSupportActionBar().setTitle(getResources().getString(R.string.Detail));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-    @BindView(R.id.detailsName) TextView sName;
-    @BindView(R.id.detailsArtist)TextView aName;
-    @BindView(R.id.detailsGenre) TextView gName;
-    @BindView(R.id.detailsScore) TextView score;
-    @BindView(R.id.albumDetails) TextView album;
+    @BindView(R.id.detailsNameTV) TextView sName;
+    @BindView(R.id.detailsArtistTV)TextView aName;
+    @BindView(R.id.detailsGenreTV) TextView gName;
+    @BindView(R.id.detailsScoreTV) TextView score;
+    @BindView(R.id.albumDetailsTV) TextView album;
     @OnClick(R.id.detailsBtn)
     public void goToPlayer(){
         finish();

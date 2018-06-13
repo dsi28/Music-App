@@ -26,17 +26,19 @@ public class MusicPlayerActivity extends AppCompatActivity {
         songName.setText(curSong.getName());
         artistName.setText(curSong.getMainArtist());
         songGenre.setText(curSong.getGenre());
+        getSupportActionBar().setTitle(getResources().getString(R.string.Player));
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
-    @BindView(R.id.playerMusicListType) TextView songGenre;
-    @BindView(R.id.playerPic)  ImageView songPic;
-    @BindView(R.id.playerPauseSong) ImageView pauseSong;
-    @BindView(R.id.playerPausePic) ImageView pausePic;
-    @BindView(R.id.playerPlaySong) ImageView playSong;
-    @BindView(R.id.playerPlayPic) ImageView playPic;
+    @BindView(R.id.playerMusicListTypeTV) TextView songGenre;
+    @BindView(R.id.playerPicIv)  ImageView songPic;
+    @BindView(R.id.playerPauseSongIv) ImageView pauseSong;
+    @BindView(R.id.playerPausePicIv) ImageView pausePic;
+    @BindView(R.id.playerPlaySongIv) ImageView playSong;
+    @BindView(R.id.playerPlayPicIv) ImageView playPic;
     @BindView(R.id.playerSongNameTV) TextView songName;
-    @BindView(R.id.playerArtist) TextView artistName;
-    @BindView(R.id.playerSongBar) SeekBar songBar;
-    @OnClick(R.id.playerNoLike)
+    @BindView(R.id.playerArtistTV) TextView artistName;
+    @BindView(R.id.playerSongSB) SeekBar songBar;
+    @OnClick(R.id.playerNoLikeIv)
     public void noLikeSong(){
         if (like==2){
             songPic.setBackgroundColor(getResources().getColor(R.color.noLike));
@@ -50,7 +52,7 @@ public class MusicPlayerActivity extends AppCompatActivity {
             curSong.noLikeSong();
             like=1;}
     }
-    @OnClick(R.id.playerLike)
+    @OnClick(R.id.playerLikeIv)
     public void likeSong(){
         if(like==1) {
             songPic.setBackgroundColor(getResources().getColor(R.color.like));
@@ -63,7 +65,7 @@ public class MusicPlayerActivity extends AppCompatActivity {
         curSong.likeSong();
         like=2;}
     }
-    @OnClick(R.id.playerPauseSong)
+    @OnClick(R.id.playerPauseSongIv)
     public void pauseSong(){
         pauseSong.setVisibility(View.INVISIBLE);
         playSong.setVisibility(View.VISIBLE);
@@ -76,7 +78,7 @@ public class MusicPlayerActivity extends AppCompatActivity {
             }
         }.start();
     }
-    @OnClick(R.id.playerPlaySong)
+    @OnClick(R.id.playerPlaySongIv)
     public void playSong(){
         playSong.setVisibility(View.INVISIBLE);
         pauseSong.setVisibility(View.VISIBLE);
@@ -89,7 +91,7 @@ public class MusicPlayerActivity extends AppCompatActivity {
             }
         }.start();
     }
-    @OnClick(R.id.playerSongInfo)
+    @OnClick(R.id.playerSongInfoIv)
     public void goToDetails(){
         Intent intent = new Intent(MusicPlayerActivity.this, SongDetailsActivity.class);
         intent.putExtra("curSong", curSong);

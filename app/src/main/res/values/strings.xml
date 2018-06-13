@@ -17,4 +17,8 @@
     <string name="playerSongPauseControl">is paused</string>
     <string name="playerSongPlayControl">is playing</string>
     <string name="return1">return</string>
+    <string name="Menu">Home</string>
+    <string name="Player">Song Player</string>
+    <string name="Detail">Song Details</string>
+    <string name="Library">Music Library</string>
 </resources>

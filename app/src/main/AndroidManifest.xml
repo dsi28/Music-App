@@ -9,16 +9,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" android:label="@string/Menu">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MusicListActivity" />
-        <activity android:name=".MusicPlayerActivity" />
-        <activity android:name=".SongDetailsActivity"></activity>
+        <activity android:name=".MusicListActivity" android:label="@string/Library" android:parentActivityName=".MainActivity" ></activity>
+        <activity android:name=".MusicPlayerActivity" android:label="@string/Player" android:parentActivityName=".MusicListActivity"></activity>
+        <activity android:name=".SongDetailsActivity" android:label="@string/Detail" android:parentActivityName=".MainActivity"></activity>
     </application>
 
 </manifest>

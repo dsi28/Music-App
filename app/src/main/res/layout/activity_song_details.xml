@@ -4,11 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SongDetailsActivity"
     android:background="@color/black"
     android:id="@+id/details">
+
     <TextView
-        android:id="@+id/detailsBackground"
+        android:id="@+id/detailsBackgroundTV"
         android:layout_width="match_parent"
         android:layout_height="@dimen/zeroDP"
         android:layout_marginTop="@dimen/medium3DP"
@@ -16,9 +16,10 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailsScore" />
+        app:layout_constraintTop_toBottomOf="@+id/detailsScoreTV" />
+
     <TextView
-        android:id="@+id/detailsName"
+        android:id="@+id/detailsNameTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/listDP"
@@ -26,14 +27,14 @@
         android:layout_marginRight="@dimen/listDP"
         android:layout_marginStart="@dimen/listDP"
         android:layout_marginTop="@dimen/listDP"
-        tools:text="I Don't Wanna Wait"
         android:textColor="@color/colorAccent"
         android:textSize="@dimen/medSP2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
+
     <TextView
-        android:id="@+id/detailsScore"
+        android:id="@+id/detailsScoreTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/smallDP"
@@ -45,10 +46,10 @@
         android:textSize="@dimen/largSP"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailsName"
-        tools:text="10" />
+        app:layout_constraintTop_toBottomOf="@+id/detailsNameTV"/>
+
     <TextView
-        android:id="@+id/detailsArtist"
+        android:id="@+id/detailsArtistTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/listDP"
@@ -60,10 +61,10 @@
         android:textSize="@dimen/medSP"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailsScore"
-        tools:text="SOJA" />
+        app:layout_constraintTop_toBottomOf="@+id/detailsScoreTV"/>
+
     <TextView
-        android:id="@+id/albumDetails"
+        android:id="@+id/albumDetailsTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/smallDP"
@@ -75,10 +76,10 @@
         android:textSize="@dimen/medSP"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailsArtist"
-        tools:text="Born In Babylon" />
+        app:layout_constraintTop_toBottomOf="@+id/detailsArtistTV"/>
+
     <TextView
-        android:id="@+id/detailsGenre"
+        android:id="@+id/detailsGenreTV"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/smallDP"
@@ -90,8 +91,7 @@
         android:textSize="@dimen/medSP"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/albumDetails"
-        tools:text="Reggae" />
+        app:layout_constraintTop_toBottomOf="@+id/albumDetailsTV"/>
     <Button
         android:id="@+id/detailsBtn"
         android:layout_width="wrap_content"
@@ -109,6 +109,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/detailsGenre"
+        app:layout_constraintTop_toBottomOf="@+id/detailsGenreTV"
         app:layout_constraintVertical_bias="1.0" />
 </android.support.constraint.ConstraintLayout>

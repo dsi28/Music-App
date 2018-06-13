@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
     android:background="@color/black">
     <Button
-        android:id="@+id/mainBtn2"
+        android:id="@+id/hipHopBtn"
         android:layout_width="@dimen/zeroDP"
         android:layout_height="@dimen/zeroDP"
         android:layout_marginBottom="@dimen/smallDP"
@@ -21,13 +19,14 @@
         android:text="@string/hipHop"
         android:textSize="@dimen/medium1SP"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/mainBtn3"
+        app:layout_constraintBottom_toTopOf="@+id/danceBtn"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/mainPlay"
-        app:layout_constraintTop_toBottomOf="@+id/mainHeading" />
+        app:layout_constraintStart_toEndOf="@+id/mainPlayIv"
+        app:layout_constraintTop_toBottomOf="@+id/mainHeadingTv" />
+
     <Button
-        android:id="@+id/mainBtn1"
+        android:id="@+id/reggaeBtn"
         android:layout_width="@dimen/zeroDP"
         android:layout_height="@dimen/zeroDP"
         android:layout_marginEnd="@dimen/smallDP"
@@ -39,12 +38,12 @@
         android:text="@string/reggae"
         android:textSize="@dimen/medium1SP"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/mainBtn2"
+        app:layout_constraintBaseline_toBaselineOf="@+id/hipHopBtn"
         app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toStartOf="@+id/mainPlay"
+        app:layout_constraintEnd_toStartOf="@+id/mainPlayIv"
         app:layout_constraintStart_toStartOf="parent" />
     <TextView
-        android:id="@+id/mainHeading"
+        android:id="@+id/mainHeadingTv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="@dimen/smallDP"
@@ -59,8 +58,9 @@
         app:layout_constraintTop_toTopOf="parent"
         android:textColor="@color/colorAccent"
         android:fontFamily="sans-serif-smallcaps"/>
+
     <Button
-        android:id="@+id/mainBtn3"
+        android:id="@+id/danceBtn"
         android:layout_width="@dimen/zeroDP"
         android:layout_height="@dimen/zeroDP"
         android:layout_marginEnd="@dimen/smallDP"
@@ -72,12 +72,12 @@
         android:text="@string/dance"
         android:textSize="@dimen/medium1SP"
         android:textStyle="bold"
-        app:layout_constraintBaseline_toBaselineOf="@+id/mainBtn4"
+        app:layout_constraintBaseline_toBaselineOf="@+id/rockBtn"
         app:layout_constraintDimensionRatio="1:1"
-        app:layout_constraintEnd_toStartOf="@+id/mainPlay"
+        app:layout_constraintEnd_toStartOf="@+id/mainPlayIv"
         app:layout_constraintStart_toStartOf="parent" />
     <Button
-        android:id="@+id/mainBtn4"
+        android:id="@+id/rockBtn"
         android:layout_width="@dimen/zeroDP"
         android:layout_height="@dimen/zeroDP"
         android:layout_marginEnd="@dimen/mainLargeDp"
@@ -90,13 +90,14 @@
         android:text="@string/rock"
         android:textSize="@dimen/medium1SP"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/mainBtn5"
+        app:layout_constraintBottom_toTopOf="@+id/myMusicBtn"
         app:layout_constraintDimensionRatio="1:1"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/mainPlay"
-        app:layout_constraintTop_toBottomOf="@+id/mainBtn2" />
+        app:layout_constraintStart_toEndOf="@+id/mainPlayIv"
+        app:layout_constraintTop_toBottomOf="@+id/hipHopBtn" />
+
     <Button
-        android:id="@+id/mainBtn5"
+        android:id="@+id/myMusicBtn"
         android:layout_width="@dimen/zeroDP"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/medium2DP"
@@ -104,17 +105,17 @@
         android:layout_marginLeft="@dimen/medium3DP"
         android:layout_marginRight="@dimen/medium3DP"
         android:layout_marginStart="@dimen/medium3DP"
+        android:backgroundTint="@color/colorAccent"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/myMusic"
+        android:textSize="@dimen/medium1SP"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        android:backgroundTint="@color/colorAccent"
-        android:text="@string/myMusic"
-        android:fontFamily="sans-serif-smallcaps"
-        android:textSize="@dimen/medium1SP"
-        android:textStyle="bold"/>
+        app:layout_constraintStart_toStartOf="parent" />
+
     <ImageView
-        android:contentDescription="@string/mainPlayImgContentDesc"
-        android:id="@+id/mainPlay"
+        android:id="@+id/mainPlayIv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/zeroDP"
@@ -123,10 +124,12 @@
         android:layout_marginRight="@dimen/zeroDP"
         android:layout_marginStart="@dimen/zeroDP"
         android:layout_marginTop="@dimen/zeroDP"
+        android:contentDescription="@string/mainPlayImgContentDesc"
         android:visibility="invisible"
-        app:layout_constraintBottom_toTopOf="@+id/mainBtn5"
+        app:layout_constraintBottom_toTopOf="@+id/myMusicBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/mainHeading"
-        app:srcCompat="@drawable/ic_play_circle_outline_black_60dp" />
+        app:layout_constraintTop_toBottomOf="@+id/mainHeadingTv"
+        app:srcCompat="@drawable/ic_play_circle_outline_black_60dp"
+        android:scaleType="center"/>
 </android.support.constraint.ConstraintLayout>
