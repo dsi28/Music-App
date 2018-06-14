@@ -16,9 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".MusicListActivity" android:label="@string/Library" android:parentActivityName=".MainActivity" ></activity>
-        <activity android:name=".MusicPlayerActivity" android:label="@string/Player" android:parentActivityName=".MusicListActivity"></activity>
-        <activity android:name=".SongDetailsActivity" android:label="@string/Detail" android:parentActivityName=".MainActivity"></activity>
+        <activity android:name=".MusicListActivity" android:label="@string/Library" android:parentActivityName=".MainActivity" android:launchMode="singleTop"></activity>
+        <activity android:name=".MusicPlayerActivity" android:label="@string/Player" android:parentActivityName=".MusicListActivity" android:launchMode="singleTop"></activity>
+        <activity android:name=".SongDetailsActivity" android:label="@string/Detail" android:parentActivityName=".MusicPlayerActivity" android:launchMode="singleTop"></activity>
     </application>
 
 </manifest>
