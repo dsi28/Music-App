@@ -11,7 +11,8 @@ public class Song implements Parcelable {
     private String displayArtist;
     private String album;
     private int score=10;
-    public Song(String genre, String name, double length, String mainArtist, String featArtist, String album) {
+    private int pic;
+    public Song(String genre, String name, double length, String mainArtist, String featArtist, String album, int img) {
         setGenre(genre);
         setName(name);
         setLength(length);
@@ -19,6 +20,7 @@ public class Song implements Parcelable {
         setFeatArtist(featArtist);
         setAlbum(album);
         setDisplayArtist();
+        setPic(img);
     }
     public void noLikeSong(){
         score--;
@@ -87,6 +89,7 @@ public class Song implements Parcelable {
         displayArtist = in.readString();
         album = in.readString();
         score = in.readInt();
+        pic= in.readInt();
     }
     public static final Creator<Song> CREATOR = new Creator<Song>() {
         @Override
@@ -112,5 +115,15 @@ public class Song implements Parcelable {
         dest.writeString(displayArtist);
         dest.writeString(album);
         dest.writeInt(score);
+        dest.writeInt(pic);
+    }
+
+    public int getPic() {
+        return pic;
+    }
+
+    public void setPic(int pic) {
+        if(pic==0) this.pic=pic;
+        else this.pic = pic;
     }
 }

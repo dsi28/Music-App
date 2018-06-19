@@ -26,6 +26,7 @@ public class MusicPlayerActivity extends AppCompatActivity {
         songName.setText(curSong.getName());
         artistName.setText(curSong.getMainArtist());
         songGenre.setText(curSong.getGenre());
+        songPic.setImageResource(curSong.getPic());
         getSupportActionBar().setTitle(getResources().getString(R.string.Player));
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
     }
